@@ -1,44 +1,27 @@
-<<<<<<< HEAD
-# syuukatu-app
+# 就活企業分析アプリ
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+企業ごとの情報管理や面接対策ができる、就活生向けWebアプリです。
 
-## Getting Started
+## 🔍 主な機能
 
-First, run the development server:
+- 企業情報の登録・編集・削除（志望度・業種・年収など）
+- 面接で聞かれた質問の記録とツリー表示（なぜなぜ分析対応）
+- 自己PRや志望動機などのメモ管理
+- ログイン機能（Firebase認証）
+- 複数ユーザー対応（自分だけの企業一覧を管理）
+
+## 🛠️ 使用技術
+
+- **Next.js 13+（App Router）**
+- **TypeScript**
+- **Firebase（認証・Firestore）**
+- **Tailwind CSS**
+- **デプロイ：Vercel**
+
+## 💻 セットアップ
 
 ```bash
+git clone https://github.com/tomokikdm/syuukatu-app.git
+cd syuukatu-app
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-
-
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# syuukatu-app
->>>>>>> 3ff7f7fc3e81dcc0b36e5bb58f0fb5ee2b7ce7ca

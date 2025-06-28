@@ -1,10 +1,7 @@
-// src/app/company/[id]/template.tsx
-
 'use client';
 import { useEffect, useState, ReactNode } from 'react';
 import { doc, getDoc } from 'firebase/firestore';
-import { onAuthStateChanged } from 'firebase/auth';
-import { db, auth } from '@/lib/firebase';
+import { db } from '@/lib/firebase';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -14,27 +11,24 @@ const tabs = [
   { label: '自己PRなど', href: (id: string) => `/company/${id}/prep` },
 ];
 
-export default function Template({
-  children,
-  params,
-}: {
+type Props = {
   children: ReactNode;
   params: { id: string };
-}) {
+};
+
+export default function CompanyLayout({ children, params }: Props) {
   const id = params.id;
   const pathname = usePathname();
   const [companyName, setCompanyName] = useState('企業');
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      if (user) {
-        const snap = await getDoc(doc(db, 'users', user.uid, 'companies', id));
-        if (snap.exists()) {
-          setCompanyName(snap.data().name || '企業');
-        }
+    const fetch = async () => {
+      const snap = await getDoc(doc(db, 'users', 'YOUR_UID', 'companies', id));
+      if (snap.exists()) {
+        setCompanyName(snap.data().name || '企業');
       }
-    });
-    return () => unsubscribe();
+    };
+    fetch();
   }, [id]);
 
   return (
