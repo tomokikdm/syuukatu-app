@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation';
 const tabs = [
   { label: '企業分析', href: (id: string) => `/company/${id}` },
   { label: '面接対策', href: (id: string) => `/company/${id}/interview` },
-  { label: '自己PRなど', href: (id: string) => `/company/${id}/prep` },
+  { label: '自己PR等', href: (id: string) => `/company/${id}/prep` },
 ];
 
 export default function CompanyTabs({ id }: { id: string }) {

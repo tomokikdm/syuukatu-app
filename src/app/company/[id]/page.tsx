@@ -144,7 +144,7 @@ export default function CompanyPage() {
                 />
               ) : (
                 <p className="text-sm text-gray-300 font-semibold">
-                  {field.label || "未設定（右の”編集”から設定できます）"}
+                  {field.label || "未設定（右の”編集”から設定）"}
                 </p>
               )}
               <textarea
