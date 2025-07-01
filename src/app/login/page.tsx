@@ -68,7 +68,9 @@ export default function LoginPage() {
         <h2 className="text-2xl font-bold mb-2">就活企業分析・面接対策アプリ</h2>
         <p className="text-sm text-gray-200">
           自分だけの面接対策ノートをつくって、企業分析を整理しよう。<br />
-          スマホ・PC両方で使える、あなただけの就活アシスタント。
+          スマホ・PC両方で使える、あなただけの就活アシスタント。<br />
+          （一部機能におきましては、PC利用を推奨します）
+
         </p>
       </section>
 
