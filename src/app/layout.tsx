@@ -1,4 +1,4 @@
-import React from "react"; // ← これ追加
+import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -14,15 +14,18 @@ export const metadata: Metadata = {
   keywords: ["就活", "企業分析", "面接対策", "Webアプリ", "syuukatu"],
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="antialiased">{children}</body>
+    <html lang="ja" className={inter.variable}>
+      <body className="bg-white text-gray-900 dark:bg-black dark:text-white antialiased">
+        <main className="w-full max-w-4xl mx-auto px-4 sm:px-6">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
